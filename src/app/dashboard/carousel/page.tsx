@@ -10,7 +10,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import Autoplay from "embla-carousel-autoplay"
 
 
 export default function Page() {
@@ -23,7 +22,8 @@ export default function Page() {
           dragFree: true
         }}
         className="w-full max-w-sm"
-        plugins={[Autoplay({delay:1000})]}
+        autoPlay={1500}
+        // plugins={[Autoplay({delay:1000})]}
       >
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
